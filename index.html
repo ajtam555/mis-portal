@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS - Materialize and anime -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
+  </head>
+  
+  <style type='text/css'>
+	#CBlogo{
+		padding-right:70px;
+	}
+	#MISlogo {
+		padding-left:70px;
+	}
+	html {
+		font-family: 'Kanit', sans-serif;
+	}
+	/* label focus color */
+	.input-field input[type=text]:focus + label {
+		color: orange;
+	}
+	/* label underline focus color */
+	.input-field input[type=text]:focus {
+		border-bottom: 1px solid orange;
+		box-shadow: 0 1px 0 0 orange;
+	}    
+	#form {
+		margin-top:40px;
+	}
+	#systemsList {
+		font-size: 25px;
+	}
+  </style>
+
+  <body>
+		<nav #ff9800 orange>
+			<ul id='nav-mobile'>
+				<li><a class="waves-effect waves-light" href="#login-modal">Login</a>
+					<div id="login-modal" class="modal">
+						<div class="modal-content">
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		  
+	
+		<div class='container'>
+			
+			<div class='row'>
+				<form class='col s4'>
+					<div class='row'>
+						<label><p id='systemsList'>Select System(s)</p></label>
+						<select multiple>
+							<option value='' disabled selected>Select</option>
+							<option value='1'>JD Edwards</option>
+							<option value='2'>Microstrategy</option>
+							<option value='3'>AIMS</option>
+							<option value='4'>TOES</option>
+					
+							<div class="input-field col s12">
+								<textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+								<label for="textarea1">Comments</label>
+							</div>
+						</select>
+					</div>
+				</form>	
+			</div>
+		</div>
+
+		<!-- Modal Structure -->
+		<div id="MISlogo" class="modal">
+			<div class="modal-content">
+				<h4>Modal Header</h4>
+				<p>A bunch of text</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+			</div>
+		</div>
+		
+<!--
+			<div class='row'>
+				<form class='col s12' id='form'>
+					<div class='row'>
+						<div class='input-field col s12'>
+							<i class='material-icons prefix large black-text'>account_circle</i>
+								<input id='user' type='text' class='validate'>
+								<label for='user'>LDAP ID</label>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='input-field col s12'>
+							<i class='material-icons prefix large black-text'>lock outline</i>
+								<input id='password' type='text' class='validate'>
+								<label for='password'>Password</label>
+						</div>
+					</div>
+					<button class="btn waves-effect waves-light #ff9800 orange" type="submit" name="action">Submit
+						<i class="material-icons right">send</i>
+					</button>
+				</form>
+			</div>
+		</div>
+-->
+  
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$('select').material_select();
+		});
+	</script>
+  
+  </body>
+</html>
